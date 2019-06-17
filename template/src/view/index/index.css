@@ -1,0 +1,34 @@
+
+.infotb { clear:both; width:100%; margin-top: 8px}
+.infotb th,.infotb td {
+    padding: 10px !important;
+    height: 25px;
+    text-align: left;
+    font-weight: normal;
+    border-top: 1px dotted #DEEFFB;
+    line-height: 21px;
+}
+
+.infotb .partition{ 
+    padding:5px; background:url(bg_repx_hc.gif) repeat-x 0 -40px; 
+    font-size: 12px;
+    font-weight: 700;
+    color: #09C;
+}
+.infotb label {color:#999;margin-right:10px;}
+.infotb label:after {content:'：';}
+
+h1 {font-size:20px;}
+
+h2,h2 .iconfont{
+    font-size:17px;color:#333;
+}
+h2 .iconfont {font-weight:normal;}
+
+.mwt-badge {border-radius:2px;display:inline-block;background:#eee;padding:2px 4px;color:#fff;}
+.mwt-badge-danger {background:#F44336;}
+.mwt-badge-warning {background:#FFBF00;}
+.mwt-badge-success {background:#4CAF50;}
+.mwt-badge-primary {background:#03A9F4;}
+.mwt-badge-black {background:#333;}
+

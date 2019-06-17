@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>{$setting[page_title]}</title>
+  <link rel="icon" type="image/png" href="{$plugin_path}/template/static/logo.png">
+  <link type="text/css" rel="stylesheet" href="{$plugin_path}/template/libs/mwt/4.0/mwt.min.css">
+  <link type="text/css" rel="stylesheet" href="{$plugin_path}/template/src/base.css">
+  <script type="text/javascript" src="{$plugin_path}/template/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script type="text/javascript" src="{$plugin_path}/template/libs/mwt/4.0/mwt.min.js"></script>
+  <script type="text/javascript" src="{$plugin_path}/template/libs/requirejs/2.1.9/require.js"></script>
+  <script type="text/javascript" src="{$plugin_path}/template/src/japp.js" charset="utf-8"></script>
+</head>
+<body>
+  <div id="frame"></div>
+  <div id="ucpop" style="display:none;">
+    <ul>
+      <li><a href="{$siteurl}member.php?mod=logging&action=logout"><i class="sicon-logout"></i> 退出系统</a></li>
+    </ul>
+  </div>
+<script>
+// 全局参数
+var setting = {echo json_encode($setting);};
+var nav = {echo json_encode($nav)};
+var dz = {
+	// 基础信息
+	controller : '{$controller}',
+	siteurl    : '$_G['siteurl']',
+	pluginpath : '{$plugin_path}',
+	ajaxapi    : '{$plugin_path}/index.php?version=4&module=',
+	seccodeurl : '{$plugin_path}/index.php?version=4&module=seccode',
+	// 用户信息
+	uid      : $_G[uid],
+	groupid  : $_G[groupid],
+	username : '$_G['username']',
+    email    : '$_G['member']['email']',
+	avatar   : '{avatar($_G['uid'],'',true)}'
+};
+// 选中top菜单
+function activeTopNav(name){
+    jQuery('[name=navitem]').removeClass('active');
+    jQuery('#navitem-'+name).addClass('active');
+    var jparents = jQuery('#navitem-'+name).parents('li');
+    if (jparents.length>1) {
+        var jp = jparents.last();
+        if (!jp.hasClass('menu-open')) {
+            jp.removeClass('menu-close').addClass('menu-open');
+        }
+    }
+}
+var japp=new JApp('{$plugin_path}/template/src/');
+japp.init();
+mwt.showWaterMark(dz.email);
+</script>
+
+

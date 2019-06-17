@@ -1,0 +1,10 @@
+
+.wall {}
+
+.wall h1 {font-size:15px;margin:0 0 10px;padding:10px 0 20px;text-align: center;font-weight: normal;}
+.wall h2 {font-size:13px;margin:0 0 10px;padding:10px 0 10px;font-weight:normal;}
+.wall [class^=mwt-col-] {margin:0 0 15px;}
+.wall label {font-size:12px;color:#777;margin-right:10px;}
+.wall label:after {content:':'}
+.wall span {font-size:13px;}
+.wall em {font-style:normal;font-size:14px;color:red;font-weight:bold;}

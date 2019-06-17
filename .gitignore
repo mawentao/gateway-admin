@@ -1,0 +1,6 @@
+output
+template/dist
+/.idea/
+.idea/
+gitpullcheck.sh 
+./template/libs/mwt/update.sh
