@@ -191,7 +191,6 @@ define(function(require){
         return '<a href="'+url+'" '+
           'style="display:block;padding:20px 0 10px;text-align:center;color:'+color+';font-size:13px;text-decoration:none;">'+
             '<img src="'+logo+'" style="width:16px;height:16px;vertical-align:text-bottom"> '+
-            'xiaojukeji.com'+
         '</a>';
     };
 
