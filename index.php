@@ -21,7 +21,7 @@ try {
     //1. 注册API模块
     $modules = array (
         'admin','seccode','uc','dict',
-		'gwapp',
+		'gwapp','gwappEnv','gwapi',
     );
     if(!in_array($_GET['module'], $modules)) {
         throw new Exception("module not found[$module]");

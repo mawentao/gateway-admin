@@ -65,21 +65,6 @@ iconlabel = {
     plus: function(label) { return '<i class="sicon-plus"></i> '+label;}
 };
 
-
-// 格式化金额
-function formatAmount(nu)
-{
-    var n = parseFloat(nu);
-    if (n<1000) {
-        n =  parseInt(n*100)/100;
-        return n+'元';
-    } else {
-        n = n/10000;
-        n = parseInt(n*100)/100;
-        return n+'万元';
-    }
-}
-
 var gridRender = {
     money: function(v) {
         return formatAmount(v);
@@ -100,5 +85,17 @@ var gridRender = {
         return '<span style="color:'+color+'"><i class="fa fa-dot-circle-o"></i> '+item.text+'</span>';
     }
 };
+
+/* dz提交数据特殊字符转义 */
+function dz_post_encode(str)
+{/*{{{*/
+    var res = str.replace(/"/g,'&quot;');
+    res = res.replace(/'/g,'&apos;');
+    res = res.replace(/</g,'&lt;');
+    res = res.replace(/>/g,'&gt;');
+    res = res.replace(/\(/g,'&lk;');
+    res = res.replace(/\)/g,'&gk;');
+    return res;
+}/*}}}*/
 
 

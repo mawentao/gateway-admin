@@ -5,6 +5,8 @@ if (!defined('IN_DISCUZ')) {
 require_once dirname(__FILE__)."/class/env.class.php";
 $plugin_path = gwadmin_env::get_plugin_path();
 $setting = C::m('#gwadmin#gwadmin_setting')->get();
+unset($setting['db_gateway']['user']);
+unset($setting['db_gateway']['pass']);
 $embedded = isset($_GET['embedded']) ? 1 : 0;
 
 try {

@@ -1,5 +1,14 @@
 
-.wall {}
+.wall {
+	background:#f1f2f3;
+	padding:10px;
+	margin:10px 0 0;
+	border:solid 1px #eee;
+	border-radius:4px;
+}
+.wall table {width:100%;}
+.wall td,.wall th {padding:5px;text-align:left;}
+.wall span {padding:8px 10px;border-radius:4px;border:solid 1px #ddd;display:block;}
 
 .wall h1 {font-size:15px;margin:0 0 10px;padding:10px 0 20px;text-align: center;font-weight: normal;}
 .wall h2 {font-size:13px;margin:0 0 10px;padding:10px 0 10px;font-weight:normal;}
@@ -8,3 +17,5 @@
 .wall label:after {content:':'}
 .wall span {font-size:13px;}
 .wall em {font-style:normal;font-size:14px;color:red;font-weight:bold;}
+
+.blockbtn {width:130px;overflow:hidden;white-space: nowrap;text-overflow: ellipsis;color:#999;}

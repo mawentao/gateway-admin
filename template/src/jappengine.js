@@ -9,7 +9,8 @@ define(function(require){
     var urlmap=require('core/urlmap');
 
     var pages = [
-        require('view/api/page'),   //!< 接口管理
+        require('view/api/page'),   //!< 接口列表
+        require('view/app/page'),   //!< 网关应用
         require('view/index/page')  //!< 默认首页
     ];
 

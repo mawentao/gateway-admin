@@ -18,7 +18,7 @@ define(function(require){
             bordered    : false,
 			position    : 'fixed',
             striped     : true,     //!< 斑马纹
-			bodyStyle   : '',
+			bodyStyle   : 'top:85px;',
 			tbarStyle   : 'margin-bottom:10px;',
 			tbar: [
 				{label:"权限",id:"auth-sel",type:'select',value:'-1',

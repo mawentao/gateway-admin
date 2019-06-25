@@ -17,7 +17,7 @@ class model_gwadmin_nav_setting
             // 导航菜单
             'navmenu' => array (
                 array('newtab'=>0,'enable'=>1,'text'=>'首页','icon'=>'sicon-home','href'=>'#/'),
-                array('newtab'=>0,'enable'=>1,'text'=>'接口管理','icon'=>'sicon-vector','href'=>'#/api'),
+                array('newtab'=>0,'enable'=>1,'text'=>'网关应用','icon'=>'sicon-vector','href'=>'#/app'),
             )
         );
 		return $setting;

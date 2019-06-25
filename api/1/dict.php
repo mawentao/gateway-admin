@@ -19,7 +19,7 @@ function getOptionsAction()
     $res = array();
     $key = gwadmin_validate::getNCParameter('key','key','string',1024);
     switch ($key) {
-        //case 'city': return C::t('#gwadmin#gwadmin_city')->getOptions();
+        case 'apiAuth': return C::t('#gwadmin#gw_api_auth')->getOptions();
         default: break;
     }   
     return $res;

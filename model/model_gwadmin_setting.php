@@ -22,6 +22,8 @@ class model_gwadmin_setting
             'fold_navmenu' => 0,
             // 启用缓存
             'cache_enable' => 1,
+			// 网关服务地址
+			'gateway_url' => 'http://127.0.0.1:8020',
 			// 网关DB: gateway
             'db_gateway' => array (
                 'host' => '127.0.0.1',

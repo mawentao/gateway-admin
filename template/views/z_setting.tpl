@@ -24,6 +24,7 @@
         jQuery("input[name=disable_discuz][value="+v.disable_discuz+"]").attr("checked",true);
         jQuery('#page_title').val(v.page_title);
         jQuery('#page_copyright').val(v.page_copyright);
+        jQuery('#gateway_url').val(v.gateway_url);
 
 		var dbs = ['gateway','auto_small_biz','blueone_car_biz','lang_blueone_carmanage','chesheng_report'];
         for(var i=0;i<dbs.length;++i) {
@@ -52,7 +53,7 @@
   <table class="tb tb2">
     <tr><th colspan="15" class="partition">全局设置</th></tr>
     <tr>
-      <td width='90'>屏蔽discuz：</td>
+      <td width='110'>屏蔽discuz：</td>
       <td width='300'>
 	    <label><input name="disable_discuz" type="radio" value="1"> 是</label>
         &nbsp;&nbsp;
@@ -69,6 +70,11 @@
 	  <td>版权信息：</td>
       <td><input type="text" id="page_copyright" name="page_copyright" class="txt" style="width:96%"></td>
 	  <td class='tips2'>版权信息</td>
+	</tr>
+	<tr>
+	  <td>网关服务地址：</td>
+      <td><input type="text" id="gateway_url" name="gateway_url" class="txt" style="width:96%"></td>
+	  <td class='tips2'></td>
 	</tr>
 	<tr><th colspan="15" class="partition">网关DB设置</th></tr>
 	<tr>
